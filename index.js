@@ -104,7 +104,7 @@ io.on("connection", (socket) => {
       } else {
         // If product doesn't exist, add a new entry
         const newProduct = new Product({
-          productionDate: info.productionDate,
+          productionDate: new Date().toLocaleDateString(),
           product_name: info.product_name,
           block: info.block,
           shift: info.shift,
